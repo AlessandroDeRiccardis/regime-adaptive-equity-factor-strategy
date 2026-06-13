@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "regime-adaptive-equity-factor-strategy"
+version = "0.1.0"
+description = "Reproducible cross-sectional equity factor research with regime-dependent hedge sizing."
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+dependencies = [
+  "matplotlib>=3.8",
+  "numpy>=1.26",
+  "openpyxl>=3.1",
+  "pandas>=2.2",
+  "PyYAML>=6.0",
+  "scipy>=1.12",
+  "seaborn>=0.13",
+  "statsmodels>=0.14",
+]
+
+[project.optional-dependencies]
+dev = ["black>=24.0", "pytest>=8.0", "ruff>=0.5"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.black]
+line-length = 100
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+exclude = ["legacy", "notebooks"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]

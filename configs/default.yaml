@@ -1,0 +1,41 @@
+project:
+  name: regime-adaptive-equity-factor-strategy
+  random_seed: 42
+
+data:
+  raw_path: data/raw/bloomberg_panel.xlsx
+  sample_path: data/sample/synthetic_panel.csv
+  processed_path: data/processed/master_panel.csv
+  backtest_path: data/processed/backtest_returns.csv
+  sheet_name: Data
+  use_sample_if_raw_missing: true
+
+features:
+  fundamental_lag_months: 2
+  fundamental_fill_limit_months: 10
+  momentum_lookback_months: 12
+  momentum_skip_months: 1
+  winsor_lower: 0.01
+  winsor_upper: 0.99
+
+research:
+  burn_in_start: "2010-01-31"
+  burn_in_end: "2013-12-31"
+  oos_start: "2014-03-31"
+  oos_end: "2025-12-31"
+  minimum_ic_observations: 20
+  zero_floor_negative_ic: true
+
+portfolio:
+  top_quantile: 0.90
+  bottom_quantile: 0.10
+  volatility_lookback_months: 12
+  minimum_volatility_observations: 6
+  score_smoothing_months: 3
+  regime_sma_months: 10
+  bear_short_ratio: 0.40
+  transaction_cost_bps: 3.0
+
+output:
+  figures_dir: reports/figures
+  tables_dir: reports/tables

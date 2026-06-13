@@ -1,0 +1,19 @@
+name: equity-factor-research
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - matplotlib
+  - numpy
+  - openpyxl
+  - pandas
+  - pyyaml
+  - scipy
+  - seaborn
+  - statsmodels
+  - pytest
+  - ruff
+  - black
+  - pip
+  - pip:
+      - -e .
