@@ -9,3 +9,11 @@ traceability. It is not the public-facing research pipeline.
 
 The original files contain assignment wording and several metric/benchmark
 descriptions corrected in the refactored repository. They are preserved unchanged.
+
+## Licensing
+
+The root MIT license applies to the cleaned research implementation created for
+this repository. Materials under `legacy/` originate from group coursework and
+are retained only for auditability and research traceability. They are not
+relicensed under MIT by this repository; their original authors retain their
+respective rights.

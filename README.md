@@ -12,6 +12,9 @@ This repository is a cleaned and reorganized research implementation based on
 group coursework. The public-facing repository focuses on reproducibility,
 implementation quality, and honest research presentation.
 
+The MIT license covers the cleaned implementation. Preserved group-coursework
+materials under `legacy/` remain subject to their original authors' rights.
+
 ## Research Question
 
 Can a cross-sectional equity factor model combine value, quality, and momentum
